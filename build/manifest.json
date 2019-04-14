@@ -1,0 +1,22 @@
+{
+    "name": "Super Screen Indicator",
+    "description" : "Screen light controller and indicator",
+    "version": "1.0",
+    "manifest_version": 2,
+    "icons": { "16": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png" },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "scripts": [
+        ]
+    },
+    "permissions": ["activeTab"],
+	"content_scripts":[{
+		"matches":["<all_urls>"],
+		"js":[ "contentscript.js"]
+	}]
+}
